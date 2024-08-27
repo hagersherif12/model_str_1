@@ -2,9 +2,12 @@ import streamlit as st
 import pickle
 
 
-# load pkl file
-with open('dibates_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+try:
+    with open('diabetes_model.pkl', 'rb') as file:
+        # Load your model here
+except FileNotFoundError:
+    print("The file 'dibates_model.pkl' was not found.")
+
 
 #title the page
 st.title("diabetes patient")
