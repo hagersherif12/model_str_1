@@ -24,7 +24,7 @@ DiabetesPedigreeFunction = st.sidebar.number_input('Diabetes Pedigree Function',
 # Prediction button
 if st.sidebar.button('Predict'):
     # Make prediction
-    output = model.predict([[Pregnancies, Glucose, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+    output = model.predict([[Age,Pregnancies, Glucose, Insulin, BMI, DiabetesPedigreeFunction]])
     
     # Display result
     if output[0] == 1:
@@ -36,4 +36,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.write("Developed with ❤️ by [Your Name]")
+st.write("Developed with ❤️ by [Hager Sherif ]")
