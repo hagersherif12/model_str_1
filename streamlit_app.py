@@ -13,12 +13,13 @@ st.write("This application predicts the likelihood of diabetes based on certain 
 st.sidebar.header("Patient Input Features")
 
 # Inputs in the sidebar
+Age = st.sidebar.number_input('Age', min_value=0.0, max_value=120.0, value=25.0)
 Pregnancies = st.sidebar.number_input('Pregnancies', min_value=0.0, max_value=20.0, value=1.0)
 Glucose = st.sidebar.number_input('Glucose', min_value=0.0, max_value=200.0, value=85.0)
 Insulin = st.sidebar.number_input('Insulin', min_value=0.0, max_value=300.0, value=30.0)
 BMI = st.sidebar.number_input('BMI', min_value=0.0, max_value=70.0, value=20.0)
 DiabetesPedigreeFunction = st.sidebar.number_input('Diabetes Pedigree Function', min_value=0.0, max_value=2.5, value=0.5)
-Age = st.sidebar.number_input('Age', min_value=0.0, max_value=120.0, value=25.0)
+
 
 # Prediction button
 if st.sidebar.button('Predict'):
